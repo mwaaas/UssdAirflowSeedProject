@@ -1,0 +1,21 @@
+version: '2'
+services:
+  app:
+    build: .
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - 7001:80
+
+  ngrok:
+    image: wernight/ngrok
+    command: ngrok http app:80
+    ports:
+      - 4040:4040
+    links:
+      - app
+    environment:
+      - NGROK_AUTH=6zENHXTPbYTDqPNDzx3sR_oaw8vi8qEKwoVjmG69Q2
+      - NGROK_REGION=eu
+      - NGROK_SUBDOMAIN=ivr-demo
+

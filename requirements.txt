@@ -1,0 +1,4 @@
+django==1.11.5
+ussd_airflow==0.0.4.9
+gunicorn==19.6.0
+celery==4.1.0

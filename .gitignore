@@ -2,3 +2,4 @@
 static
 *.sqlite3
 *.pyc
+*.pycon_venv
